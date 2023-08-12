@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Google Fonts: Poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>NLP</title>
+	</head>
+	<body>
+		<main>
+			<section class="form-container">
+				<form action="" class="form">
+					<section class="form__text">
+						<label class="label" for="text">Enter your URL:</label>
+						<input
+							type="text"
+							name="text"
+							id="text"
+							placeholder="Your message..."
+							autofocus
+							required
+						/>
+					</section>
+					<div class="error"></div>
+					<button class="form__btn" type="submit" disabled>Analyze</button>
+				</form>
+			</section>
+
+			<section class="results">
+				<h1 class="results__title">Analysis Result :</h1>
+				<ul class="results__data"></ul>
+			</section>
+		</main>
+		<script>
+			// Check that service workers are supported
+			if ('serviceWorker' in navigator) {
+				// Use the window load event to keep the page load performant
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('/service-worker.js');
+				});
+			}
+		</script>
+	</body>
+</html>

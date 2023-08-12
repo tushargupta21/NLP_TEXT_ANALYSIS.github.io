@@ -1,0 +1,13 @@
+.results {
+	margin-top: 2em;
+	color: var(--text);
+	font-family: 'Poppins', sans-serif;
+
+	.results__title {
+		margin-bottom: 0.5em;
+	}
+
+	.results__data {
+		list-style: none;
+	}
+}

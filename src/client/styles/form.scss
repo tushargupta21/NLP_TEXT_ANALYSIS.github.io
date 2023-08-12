@@ -1,0 +1,58 @@
+.form-container {
+	max-width: 700px;
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		border-radius: 0.3em;
+		background-color: var(--surface2);
+		padding: 2em;
+	}
+
+	.form__text {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1em;
+
+		.label {
+			color: var(--text);
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.3rem;
+			margin-bottom: 0.5em;
+		}
+
+		#text {
+			resize: none;
+			border: none;
+			border-bottom: 1px solid var(--border);
+			padding: 0.8em;
+			padding-bottom: 0.1rem;
+			background-color: transparent;
+			font-size: 1.5rem;
+			font-weight: 300;
+			white-space: nowrap;
+			color: #fff;
+			margin-bottom: 1rem;
+			width: 100%;
+			overflow: hidden;
+
+			&.invalid {
+				border: 2px solid var(--error);
+			}
+
+			&:focus-visible {
+				border: none;
+				border-bottom: 2px solid #fff;
+				outline: none;
+
+				&::placeholder {
+					color: #fff;
+				}
+			}
+
+			&::placeholder {
+				color: gray;
+			}
+		}
+	}
+}
